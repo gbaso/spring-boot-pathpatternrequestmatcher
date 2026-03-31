@@ -1,14 +1,14 @@
 # Path Pattern Builder in WebMVC tests
 
-Class [GreetingsControllerTest.java](src/test/java/com/github/gbaso/ppb/GreetingsControllerTest.java) contains tests for a secured endpoint.
+Test classes in the [main package](src/test/java/com/github/gbaso/ppb) contain tests for a secured endpoint.
 
-`GreetingsControllerTest.Servlet` uses the default security configuration and a real servlet environment.
+`ServletTest` uses the default security configuration and a real servlet environment.
 
-`GreetingsControllerTest.Mock.WithDefaultSecurity` uses the default security configuration and a mock servlet environment.
+`MockWithDefaultSecurityTest` uses the default security configuration and a mock servlet environment.
 
-`GreetingsControllerTest.Mock.WithHttpSecurityCustomizer` uses a customizer to allow unauthenticated access to the endpoint that matches `/hello` using a matcher built from `PathPatternRequestMatcher.Builder`.
+`MockWithHttpSecurityCustomizerTest` uses a customizer to allow unauthenticated access to the endpoint that matches `/hello` using a matcher built from `PathPatternRequestMatcher.Builder`.
 
-`GreetingsControllerTest.Mock.WithSecurityFilterChain` uses a custom SecurityFilterChain bean to allow unauthenticated access to the endpoint that matches `/hello` using a matcher built from `PathPatternRequestMatcher.Builder`.
+`MockWithSecurityFilterChainTest` uses a custom SecurityFilterChain bean to allow unauthenticated access to the endpoint that matches `/hello` using a matcher built from `PathPatternRequestMatcher.Builder`.
 
 Both tests that use `PathPatternRequestMatcher.Builder` fail with the same error:
 
